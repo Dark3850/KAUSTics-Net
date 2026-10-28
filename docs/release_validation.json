@@ -1,0 +1,77 @@
+{
+  "exact_function_class_matches": [
+    "kausticsnet/model.py:set_seed",
+    "kausticsnet/model.py:to_uint8_img",
+    "kausticsnet/model.py:sinusoidal_positional_embedding",
+    "kausticsnet/model.py:group_norm",
+    "kausticsnet/model.py:ResidualBlock",
+    "kausticsnet/model.py:_nearest_pow2",
+    "kausticsnet/model.py:_make_pyramid_sizes",
+    "kausticsnet/model.py:CondEncoder",
+    "kausticsnet/model.py:SlimUNet",
+    "kausticsnet/model.py:cosine_beta_schedule",
+    "kausticsnet/model.py:DiffusionScheduler",
+    "kausticsnet/model.py:gaussian_kernel1d",
+    "kausticsnet/model.py:gaussian_blur",
+    "kausticsnet/model.py:chroma_uv",
+    "kausticsnet/kaustics_data.py:Pairs",
+    "kausticsnet/losses.py:mean_per_image",
+    "kausticsnet/losses.py:ssim_per_image",
+    "kausticsnet/losses.py:normalized_lab",
+    "kausticsnet/losses.py:loss_terms",
+    "kausticsnet/losses.py:objective",
+    "kausticsnet/diffusion.py:coefficients",
+    "kausticsnet/diffusion.py:velocity_target",
+    "kausticsnet/diffusion.py:predictions",
+    "kausticsnet/diffusion.py:pilot_loss_terms",
+    "kausticsnet/diffusion.py:pilot_objective",
+    "kausticsnet/diffusion.py:pilot_ddim",
+    "kausticsnet/spaced_ddim.py:ddim_times",
+    "kausticsnet/spaced_ddim.py:spaced_ddim",
+    "kausticsnet/adaptation.py:sampled_restoration",
+    "kausticsnet/adaptation.py:sampled_loss"
+  ],
+  "portable_source_scan_passed": true,
+  "cpu_next_update_and_optimizer_replay_exact": true,
+  "loss": 0.5512101054191589,
+  "tensor_digest": "9ce20adfcedcedaf672c530abc3bf79faa0acee21c3bad95b97768c46234e594",
+  "torch": "2.6.0+cu126",
+  "smoke_train": {
+    "best_epoch": 1,
+    "best": 8.772305890620864,
+    "early_stopped": false,
+    "smoke": true,
+    "epochs": 1
+  },
+  "smoke_finetune": {
+    "best_epoch": 1,
+    "best": 0.2771919391877755,
+    "early_stopped": false,
+    "smoke": true,
+    "epochs": 1
+  },
+  "smoke_inference": {
+    "count": 1,
+    "seed": 1,
+    "variant": "all_effects",
+    "metrics": {
+      "psnr": 34.90682915177386,
+      "ssim": 0.9454778223403703,
+      "mse": 0.00032308521537189233,
+      "rmse": 0.01797457135432977,
+      "delta_e_2000": 1.6112452498639567
+    }
+  },
+  "smoke_tests_are_not_paper_results": true,
+  "six_checkpoint_tensor_hashes_match": true,
+  "fixed_validation_subset_sha256": "b7017d210c39be5cba8dbd7c67a7192c0426c775f7586d46e59bad04199a09af",
+  "GPU_bitwise_replay_not_run_for_portable_wrapper": true,
+  "redundant_runtime_image_links_removed": 30800,
+  "original_experiment_files_modified": false,
+  "gitignore_excludes_pixels_weights_payloads_and_keeps_manifests": true,
+  "huggingface_checksum_entry_counts": {
+    "KAUSTics-Net": 8,
+    "KAUSTics": 28164,
+    "Sea-Undistort-evaluation": 2642
+  }
+}

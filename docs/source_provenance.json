@@ -1,0 +1,77 @@
+{
+  "source_files": {
+    "src/Train_KAUSTics_v9.py": "19eaebb983fce139f1147b87746c46310f0dfeccdb4995368c7247d580a6a6a3",
+    "src/run_experiment.py": "32ac4cefc36fa85c861f4bda7a2fe9778cbe8030450f4127dd8eed1b689f11bf",
+    "src/psnr_pilot_diffusion.py": "165428dbd0e2ee5e5ad6007b60d113a1123980e9ea94146016463e08c470140b",
+    "src/restoration_losses.py": "afca8a2198a98bc41fe778a7f5d5b7ddee29511b28219da4270d2151647c192e",
+    "src/spaced_ddim.py": "5ad4eba340c0cddb6eae349d2fcac249ea1595a2c424bbf04c7c520048e1d44d",
+    "src/su_sampler_adaptation.py": "a8646fabeec9d9b3dff9827a9fa93cdea7f00773972f453dcc66e57fc80c07bb",
+    "tools/velocity_c_full_20261011.py": "bfa9bb4ea5f414d09f6755291311b2ea744c8797a43fc6aec3150284fc0d4d0e",
+    "tools/su_c_strong_pilots_20261019.py": "f6f329dd82971631a8ff57160a58c84fb3061c1507a63c3e74216a9fc67299d7",
+    "tools/su_gt_inputs3_20261014.py": "385ddea774451589b0db3a4bec3c81371bab6d9cb24763d14e7bd906de22fed4",
+    "tools/su_c_ssim_pilots_20261018.py": "85fdbbba5fa94f018827ef9baca12f9a01f694568a4ecd352bde23805243a3cc"
+  },
+  "extraction": "Model, scheduler, loss and sampler function bodies copied without numerical changes; portable training/data CLI added.",
+  "checkpoints": [
+    {
+      "path": "kaustics/seed1.pt",
+      "seed": 1,
+      "family": "kaustics",
+      "epoch": 975,
+      "sha256": "b75786cc04deb435f600169e40bbff0bc2b3780661ec1f20d7f8a3bba9901b74",
+      "model_sha256": "dee37dc07bf6d51782c419c7ecc4c2cfdc1242089b2307409045c4dbe8e9f5ec",
+      "original_checkpoint_sha256": "eac94b3d7c5b364c5e212f3f748d2e6a94d392a0f943d92b3fe0ee9e09d70edb",
+      "bytes": 26466546
+    },
+    {
+      "path": "kaustics/seed2.pt",
+      "seed": 2,
+      "family": "kaustics",
+      "epoch": 925,
+      "sha256": "2d75d39650e182c08204f4f46cd385d2fee55d64b072feafa5426aca4c63c22b",
+      "model_sha256": "da2df168563c79bfbcc131a1f2bfed6868e5596850f26aaee645d4360802d29e",
+      "original_checkpoint_sha256": "4c9b3daa082c09ceb8630abd6495014d2e1746d42010868893501fe03ed18776",
+      "bytes": 26466546
+    },
+    {
+      "path": "kaustics/seed3.pt",
+      "seed": 3,
+      "family": "kaustics",
+      "epoch": 925,
+      "sha256": "b7c38902ea7571e9744e78ec264d8d7db19418e9b64f85434e527b9fc93a6213",
+      "model_sha256": "6eb0650764e56be3d56f815924f70d0c78191e8a46964d9bf1dcd6d076ee1df9",
+      "original_checkpoint_sha256": "7d769a2e9b00eec16da90d0de8cf1f48d501617253e38351b73d2341e8293314",
+      "bytes": 26466546
+    },
+    {
+      "path": "sea_undistort/seed1.pt",
+      "seed": 1,
+      "family": "sea_undistort",
+      "epoch": 95,
+      "sha256": "66a23614353efe59649ad973103a93240cd355d94ee673bfd3ddf131f5e4199b",
+      "model_sha256": "df81f57bcf7f4d13f04db3e43fff02ec822889d709235a1e58ae09234be953e8",
+      "original_checkpoint_sha256": "c6764d99586862e6acbbd7a0c92aece25db16172dd8ce160cfa216482150c476",
+      "bytes": 26461618
+    },
+    {
+      "path": "sea_undistort/seed2.pt",
+      "seed": 2,
+      "family": "sea_undistort",
+      "epoch": 100,
+      "sha256": "fff8b6c8a454af176f19bd770f36bbe2ee2af26ad59fda05568e753337bdd0a1",
+      "model_sha256": "e1201b07c9b56024ce9462f1f9c1d7311b42dcb3fb92f66539cf5b23581db3e2",
+      "original_checkpoint_sha256": "e35a7e4517d235cf46e1e682b5b66d5f7c17a3763af00d8fc70a43587c49cdf4",
+      "bytes": 26461618
+    },
+    {
+      "path": "sea_undistort/seed3.pt",
+      "seed": 3,
+      "family": "sea_undistort",
+      "epoch": 100,
+      "sha256": "dd28190af24b4a195cf0e5a1848778ec27020b7abb441292ba3853e236c67cff",
+      "model_sha256": "758cf063e2326827d5f471ce50fd4f71cfd5c362142c56bcdae9db4e08dd7901",
+      "original_checkpoint_sha256": "d8f6fb99b04ec8b36b5a51df956ba3c7cc544e5a6e060276d8c481c72ff9a376",
+      "bytes": 26461618
+    }
+  ]
+}

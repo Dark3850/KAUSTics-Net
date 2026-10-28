@@ -1,0 +1,6 @@
+{
+  "cpu_next_update_and_optimizer_replay_exact": true,
+  "loss": 0.5512101054191589,
+  "tensor_digest": "9ce20adfcedcedaf672c530abc3bf79faa0acee21c3bad95b97768c46234e594",
+  "torch": "2.6.0+cu126"
+}

@@ -1,0 +1,8 @@
+# Paper-matched core versions. CUDA wheels depend on your platform.
+torch==2.6.0
+torchvision==0.21.0
+numpy==2.0.2
+Pillow==11.3.0
+scikit-image==0.24.0
+# Needed only when infer.py --lpips is selected.
+lpips==0.1.4
