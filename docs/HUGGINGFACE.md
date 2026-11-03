@@ -1,15 +1,15 @@
 # Publishing this release
 
-The upload folders are prepared locally. Nothing has been uploaded to GitHub or Hugging Face by this packaging task. Replace `YOUR_HF_USERNAME` with your account/organization in this guide and the main README.
+The release is published under `dar96io` on Hugging Face and `Dark3850/KAUSTics-Net` on GitHub. The commands below document how to upload the prepared payloads and download or share the published assets.
 
 ## What goes where
 
 | Destination | Local content | Approximate logical size |
 |---|---|---:|
 | GitHub | code, requirements, README, figures, split manifests, documentation | see release report |
-| HF model repo `YOUR_HF_USERNAME/KAUSTics-Net` | `huggingface/models/KAUSTics-Net/` |151.4MiB weights |
-| HF dataset repo `YOUR_HF_USERNAME/KAUSTics` | `huggingface/datasets/KAUSTics/` |24.54GiB images |
-| HF dataset repo `YOUR_HF_USERNAME/Sea-Undistort-evaluation` | `huggingface/datasets/Sea-Undistort-evaluation/` |1.15GiB images |
+| HF model repo `dar96io/KAUSTics-Net` | `huggingface/models/KAUSTics-Net/` |151.4MiB weights |
+| HF dataset repo `dar96io/KAUSTics` | `huggingface/datasets/KAUSTics/` |24.54GiB images |
+| HF dataset repo `dar96io/Sea-Undistort-evaluation` | `huggingface/datasets/Sea-Undistort-evaluation/` |1.15GiB images |
 
 The KAUSTics repo includes both original patch bytes (~22.74GiB) and the exact256 cache (~1.79GiB). Readers can download only256 with `scripts/download_assets.py`; `--original` additionally fetches the original patches. Sea-Undistort images preserve their input bytes and are resized on loading. Its upstream dataset is also already hosted at https://huggingface.co/datasets/maxkromer/Sea-Undistort . Our payload is the840/240/120 split plus extra test input variants needed to reproduce this study, not a new dataset claim.
 
@@ -32,9 +32,9 @@ hf auth login
 3. From the **complete Ibex `github` folder**, upload each prepared folder to its own repository. The small GitHub code ZIP deliberately excludes these bulk payloads:
 
 ```bash
-hf upload YOUR_HF_USERNAME/KAUSTics-Net huggingface/models/KAUSTics-Net .
-hf upload YOUR_HF_USERNAME/KAUSTics huggingface/datasets/KAUSTics . --repo-type dataset
-hf upload YOUR_HF_USERNAME/Sea-Undistort-evaluation huggingface/datasets/Sea-Undistort-evaluation . --repo-type dataset
+hf upload dar96io/KAUSTics-Net huggingface/models/KAUSTics-Net .
+hf upload dar96io/KAUSTics huggingface/datasets/KAUSTics . --repo-type dataset
+hf upload dar96io/Sea-Undistort-evaluation huggingface/datasets/Sea-Undistort-evaluation . --repo-type dataset
 ```
 
 These commands can create repositories automatically. You can instead create a Model or Dataset repository in the website first and select public/private visibility. If interrupted, repeat the same upload; the current client resumes and skips already committed files. Current [upload documentation](https://huggingface.co/docs/huggingface_hub/en/guides/upload) recommends `hf upload`, which also handles large folders.
@@ -42,7 +42,7 @@ These commands can create repositories automatically. You can instead create a M
 For a smaller first KAUSTics upload, omit the original images and original manifest:
 
 ```bash
-hf upload YOUR_HF_USERNAME/KAUSTics huggingface/datasets/KAUSTics . --repo-type dataset \
+hf upload dar96io/KAUSTics huggingface/datasets/KAUSTics . --repo-type dataset \
   --exclude 'original/**' --exclude 'manifest_original.json'
 ```
 
@@ -51,23 +51,23 @@ The dataset card describes the complete prepared payload; if publishing only256,
 4. Share these ordinary public page links (no recipient account/token required for public ungated repos):
 
 ```text
-https://huggingface.co/YOUR_HF_USERNAME/KAUSTics-Net
-https://huggingface.co/datasets/YOUR_HF_USERNAME/KAUSTics
-https://huggingface.co/datasets/YOUR_HF_USERNAME/Sea-Undistort-evaluation
+https://huggingface.co/dar96io/KAUSTics-Net
+https://huggingface.co/datasets/dar96io/KAUSTics
+https://huggingface.co/datasets/dar96io/Sea-Undistort-evaluation
 ```
 
-A direct file link has the form `https://huggingface.co/YOUR_HF_USERNAME/KAUSTics-Net/resolve/main/kaustics/seed1.pt`. For a publication, record/tag the uploaded revision and use its commit hash rather than a mutable `main` URL. Private repositories require access authorization; do not share your write token.
+A direct file link has the form `https://huggingface.co/dar96io/KAUSTics-Net/resolve/main/kaustics/seed1.pt`. For a publication, record/tag the uploaded revision and use its commit hash rather than a mutable `main` URL. Private repositories require access authorization; do not share your write token.
 
 ## Upload code to GitHub
 
-Download `KAUSTics-Net-github.zip` (the small code archive next to this folder), extract it, and create an empty GitHub repository. After replacing the placeholder URLs and choosing the authors’ license, run from the extracted folder:
+Download `KAUSTics-Net-github.zip` (the small code archive next to this folder), extract it, and create an empty GitHub repository. For a fresh checkout, after choosing the license, run from the extracted folder:
 
 ```bash
 git init
 git add .
 git commit -m "Release KAUSTics-Net training and fine-tuning code"
 git branch -M main
-git remote add origin https://github.com/YOUR_GITHUB_USERNAME/KAUSTics-Net.git
+git remote add origin https://github.com/Dark3850/KAUSTics-Net.git
 git push -u origin main
 ```
 

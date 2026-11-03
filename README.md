@@ -10,12 +10,12 @@ The conditional encoder supplies FiLM modulation and single-head bottleneck cros
 
 | Resource | Download |
 |---|---|
-| KAUSTics: original patches and exact RGB256 cache | [Hugging Face dataset — placeholder](https://huggingface.co/datasets/YOUR_HF_USERNAME/KAUSTics) |
-| KAUSTics-Net: KAUSTics and Sea-Undistort fine-tuned seeds 1–3 | [Hugging Face models — placeholder](https://huggingface.co/YOUR_HF_USERNAME/KAUSTics-Net) |
-| Prepared Sea-Undistort experiment split | [Hugging Face dataset — placeholder](https://huggingface.co/datasets/YOUR_HF_USERNAME/Sea-Undistort-evaluation) |
+| KAUSTics: original patches and exact RGB256 cache | [Hugging Face dataset](https://huggingface.co/datasets/dar96io/KAUSTics) |
+| KAUSTics-Net: KAUSTics and Sea-Undistort fine-tuned seeds 1–3 | [Hugging Face models](https://huggingface.co/dar96io/KAUSTics-Net) |
+| Prepared Sea-Undistort experiment split | [Hugging Face dataset](https://huggingface.co/datasets/dar96io/Sea-Undistort-evaluation) |
 | Original Sea-Undistort dataset | [Authors’ release](https://huggingface.co/datasets/maxkromer/Sea-Undistort) |
 
-**The YOUR_HF_USERNAME links are placeholders, not published repositories.** Replace them after uploading. See [upload and sharing instructions](docs/HUGGINGFACE.md).
+The datasets and model weights are publicly available under [dar96io on Hugging Face](https://huggingface.co/dar96io). See [upload and sharing instructions](docs/HUGGINGFACE.md).
 
 <img src="assets/dataset.png" alt="KAUSTics dataset examples" width="900">
 
@@ -27,9 +27,9 @@ Use Python 3.10 or 3.11 and a CUDA-capable PyTorch installation. The paper used 
 
 ```bash
 python -m pip install -r requirements.txt
-# Once the placeholder repositories have been published:
+# Download the published datasets and model weights:
 python -m pip install -U huggingface_hub
-python scripts/download_assets.py --namespace YOUR_HF_USERNAME --kind all
+python scripts/download_assets.py --namespace dar96io --kind all
 
 # Restore an image (input is resized to256; output is256 RGB).
 python infer.py --checkpoint checkpoints/kaustics/seed1.pt --input image.png --output predictions/example
