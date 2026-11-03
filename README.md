@@ -15,7 +15,7 @@ The conditional encoder supplies FiLM modulation and single-head bottleneck cros
 | Prepared Sea-Undistort experiment split | [Hugging Face dataset](https://huggingface.co/datasets/dar96io/Sea-Undistort-evaluation) |
 | Original Sea-Undistort dataset | [Authors’ release](https://huggingface.co/datasets/maxkromer/Sea-Undistort) |
 
-The datasets and model weights are publicly available under [dar96io on Hugging Face](https://huggingface.co/dar96io). See [upload and sharing instructions](docs/HUGGINGFACE.md).
+The datasets and model weights are publicly available under [dar96io on Hugging Face](https://huggingface.co/dar96io).
 
 <img src="assets/dataset.png" alt="KAUSTics dataset examples" width="900">
 
@@ -60,3 +60,18 @@ The grid includes competitors for visual comparison. Their implementations and w
 `kausticsnet/`, three entry scripts, `scripts/download_assets.py`, `requirements.txt`, documentation, figures and split manifests belong on **GitHub**. `huggingface/` contains the separate dataset/model upload payloads and is ignored by Git. After downloading, runtime pixels and weights under `data/` and `checkpoints/` are also ignored. Before publication, use the manifest and weight paths inside `huggingface/` directly; see [local data usage](data/README.md). Do not upload `runs/`, environments, caches or the entire working directory.
 
 Sea-Undistort is attributed to Kromer, Agrafiotis and Demir (2025), [DOI:10.5281/zenodo.15639838](https://doi.org/10.5281/zenodo.15639838), under its upstream CC BY-NC-SA 4.0 terms. KAUSTics code/data/weight licensing is left for the authors to specify; this draft does not assign a new license.
+
+## Cite us
+
+> If you use KAUSTics-Net, the KAUSTics dataset, or the released models in your research, please cite our [arXiv preprint](https://arxiv.org/abs/2611.03120).
+
+```bibtex
+@article{scilla2026kausticsnet,
+  title   = {{KAUSTics-Net}: Diffusion-Based Through-Water {UAV} Restoration with a Semi-Synthetic Dataset},
+  author  = {Scilla, Dario and Lopez, Omar A. and Johansen, Kasper and Nieuwenhuis, Brian O. and McCabe, Matthew F.},
+  journal = {arXiv preprint arXiv:2611.03120},
+  year    = {2026},
+  doi     = {10.48550/arXiv.2611.03120},
+  url     = {https://arxiv.org/abs/2611.03120}
+}
+```
